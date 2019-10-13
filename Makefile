@@ -29,8 +29,10 @@ clean:
 
 publish:
 	git checkout gh-pages
+	git merge master
 	make all
-	git commit -a -m "pulish on $$(date)"
+	git add .
+	git commit -m "pulish on $$(date)"
 	git push
 	git checkout master
 
