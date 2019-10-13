@@ -27,3 +27,10 @@ distclean: clean
 clean:
 	rm -f *.aux *.fls *.log *.toc *.fdb_latexmk *.out
 
+publish:
+	git checkout gh-pages
+	make all
+	git commit -a -m "pulish on $$(date)"
+	git push
+	git checkout master
+
