@@ -10,7 +10,7 @@ PDF_FILES=$(patsubst %.tex,%.pdf,$(SRC_FILES))
 all: $(HTML_FILES) $(MD_FILES) $(PDF_FILES)
 
 %.md: %.tex
-	pandoc -s -f latex -w markdown -o $@ $<
+	pandoc -s -f latex -w markdown $< | sed 's/\\maketitle//' | sed 's/\\tableofcontents//' > $@
 %.html: %.tex
 	pandoc -s --mathml -f latex -w html5 -o $@ $<
 %.pdf: %.tex
