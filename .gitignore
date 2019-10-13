@@ -1,0 +1,17 @@
+
+## Generated files
+*.html
+*.md
+*.pdf
+
+## Contruction files
+# LaTeX
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.toc
+
+
+## On inclus quand-même README.md
+!README.md
