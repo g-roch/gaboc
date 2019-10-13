@@ -4,6 +4,7 @@
 \usepackage{lmodern}
 \usepackage[francais]{babel}
 \usepackage{hyperref}
+\usepackage{listings}
 
 %\providecommand{format}{pdf}
 \makeatletter

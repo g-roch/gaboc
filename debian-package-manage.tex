@@ -1,0 +1,36 @@
+
+\input{init.tex.pdf}
+
+\title{Gestion de paquet Debian -- Gaboc}
+\author{Gabriel Roch}
+\date{13 octobre 2019 -- 13 octobre 2019}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+Ce document n'a pas pour vocation de décrire le fonctionnement de Debian, 
+mais uniquement de fournir un pense-bête à son auteur.
+
+Si vous y trouver des fautes (orthographe ou technique) veuillez m'en faire part
+en ouvrant un bug à l'url \url{https://github.com/g-roch/gaboc/issues}, merci.
+
+\begin{lstlisting}
+deb http://deb.debian.org/debian/ buster main
+deb http://deb.debian.org/debian/ buster-backports main
+deb-src http://deb.debian.org/debian/ buster main
+deb-src http://deb.debian.org/debian/ testing main
+deb-src http://deb.debian.org/debian/ unstable main
+deb-src http://deb.debian.org/debian/ experimental main
+\end{lstlisting}
+
+
+
+
+% \format
+
+\end{document}
+
