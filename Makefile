@@ -10,9 +10,9 @@ PDF_FILES=$(patsubst %.tex,%.pdf,$(SRC_FILES))
 all: $(HTML_FILES) $(MD_FILES) $(PDF_FILES)
 
 %.md: %.tex
-	pandoc -s -f latex -w markdown $< | sed 's/\\maketitle//' | sed 's/\\tableofcontents//' > $@
+	pandoc -s -f latex -w markdown init.tex.md $< | sed 's/\\maketitle//' | sed 's/\\tableofcontents//' > $@
 %.html: %.tex
-	pandoc -s --mathml -f latex -w html5 -o $@ $<
+	pandoc -s --mathml -f latex -w html5 -o $@ init.tex.html $<
 %.pdf: %.tex
 	latexmk -pdf $<
 
@@ -25,5 +25,5 @@ install-deps-debian:
 distclean: clean
 	rm -f $(HTML_FILES) $(MD_FILES) $(PDF_FILES)
 clean:
-	rm -f *.aux *.fls *.log *.toc *.fdb_latexmk
+	rm -f *.aux *.fls *.log *.toc *.fdb_latexmk *.out
 

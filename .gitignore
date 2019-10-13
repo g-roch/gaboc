@@ -4,6 +4,10 @@
 *.md
 *.pdf
 
+!*.tex.html
+!*.tex.md
+!*.tex.pdf
+
 ## Contruction files
 # LaTeX
 *.aux
@@ -11,6 +15,7 @@
 *.fdb_latexmk
 *.log
 *.toc
+*.out
 
 
 ## On inclus quand-même README.md
